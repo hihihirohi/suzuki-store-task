@@ -4,6 +4,12 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// アニメーションモジュールインポート
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// ボタン・チェックボックス・テーブルモジュールインポート
+import { MatButtonModule, MatCheckboxModule, MatTableModule } from '@angular/material';
+
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -17,6 +23,10 @@ import { ShippingComponent } from './shipping/shipping.component';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    // アニメーションモジュールインポート
+    BrowserAnimationsModule,
+    // ボタン・チェックボックス・テーブルモジュールインポート
+    MatButtonModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
