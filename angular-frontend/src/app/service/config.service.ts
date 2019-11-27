@@ -11,6 +11,16 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class ConfigService {
+  apiGetProducts = "/products";
+  apiCreateProduct = "products";
+  apiDeleteProduct= "products";
+  constructor(private http:HttpClient) {
+    console.log(environment.apiUrl + this.apiGetProducts);
+  }
 
-  constructor() { }
+  // API設定
+  //一覧表示
+  getAPI(): Observable<any> {
+      return this.http.get(environment.apiUrl + this.apiGetProducts);
+  }
 }
